@@ -1,0 +1,15 @@
+{
+  "id": 1,
+  "events": [
+    {
+      "id": 2234,
+      "number": 43545,
+      "name": "random"
+    },
+    {
+      "id": 2235,
+      "number": 43546,
+      "name": "random"
+    }
+  ]
+}
