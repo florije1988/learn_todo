@@ -6,25 +6,33 @@ var scotchApp = angular.module('scotchApp', ['ngRoute']);
 
 // configure our routes
 scotchApp.config(function ($routeProvider) {
+
+    var partialsDir = '/static/partials/';
+
     $routeProvider
 
         // route for the home page
         .when('/', {
-            templateUrl: 'static/pages/home.html',
+            templateUrl: partialsDir + 'home.html',
             controller: 'mainController'
         })
 
         // route for the about page
         .when('/about', {
-            templateUrl: 'static/pages/about.html',
+            templateUrl: partialsDir + 'about.html',
             controller: 'aboutController'
         })
 
         // route for the contact page
         .when('/contact', {
-            templateUrl: 'static/pages/contact.html',
+            templateUrl: partialsDir + 'contact.html',
             controller: 'contactController'
+        })
+
+        .otherwise({
+            redirectTo: '/'
         });
+    //$locationProvider.html5Mode(true);
 });
 
 // create the controller and inject Angular's $scope
