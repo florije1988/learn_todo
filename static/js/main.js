@@ -17,6 +17,15 @@ scotchApp.config(function ($routeProvider) {
             controller: 'mainController'
         })
 
+        .when('/register', {
+            templateUrl: partialsDir + 'register.html',
+            controller: 'registerController'
+        })
+
+        .when('/login', {
+            templateUrl: partialsDir + 'login.html'
+        })
+
         // route for the about page
         .when('/about', {
             templateUrl: partialsDir + 'about.html',
